@@ -19,14 +19,56 @@
 	],
 	"modules": [
 		{
+			"name": "rapidjson",
+			"buildsystem": "cmake-ninja",
+			"config-opts": [
+				"-DRAPIDJSON_BUILD_DOC=OFF",
+				"-DRAPIDJSON_BUILD_EXAMPLES=OFF",
+				"-DRAPIDJSON_BUILD_TESTS=OFF",
+				"-DRAPIDJSON_BUILD_THIRDPARTY_GTEST=OFF"
+			],
+			"cleanup": [
+				"/include",
+				"/lib/cmake",
+				"/lib/pkgconfig",
+				"/share/doc"
+			],
+			"sources": [
+				{
+					"type": "git",
+					"url": "https://github.com/Tencent/rapidjson.git",
+					"commit": "f54b0e47a08782a6131cc3d60f94d038fa6e0a51"
+				}
+			]
+		},
+		{
+			"name": "discord-rpc",
+			"buildsystem": "cmake-ninja",
+			"config-opts": [
+				"-DBUILD_SHARED_LIBS=ON",
+				"-DBUILD_EXAMPLES=OFF"
+			],
+			"cleanup": [ "/include" ],
+			"sources": [
+				{
+					"type": "git",
+					"url": "https://github.com/discord/discord-rpc.git",
+					"commit": "c59fd6df20c6904ab39f026e87af1dd90fcac7ff"
+				}
+			]
+		},
+		{
 			"name": "parallel-launcher",
 			"buildsystem": "qmake",
-			"config-opts": [ "CONFIG+=flatpak-version" ],
+			"config-opts": [
+				"CONFIG+=flatpak-version",
+				"LIBS+=-L/app/lib"
+			],
 			"sources": [
 				{
 					"type": "git",
 					"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-					"commit": "7d26572d07fc80aee1f5604bf184a87d9d7a414c"
+					"commit": "9afd6aef1a407ab9a77512ebf4f031420440a695"
 				},
 				{
 					"type": "file",

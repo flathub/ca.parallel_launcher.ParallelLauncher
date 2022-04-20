@@ -12,8 +12,12 @@
 	<content_rating type="oars-1.1" />
 	<screenshots>
 		<screenshot type="default">
-			<caption>Parallel Launcher main window</caption>
-			<image type="source" width="580" height="759">https://parallel-launcher.ca/img/screenshot.png</image>
+			<caption>Classic View</caption>
+			<image type="source">https://parallel-launcher.ca/img/screenshot.png</image>
+		</screenshot>
+		<screenshot>
+			<caption>RHDC View</caption>
+			<image type="source">https://parallel-launcher.ca/img/rhdc-view.png</image>
 		</screenshot>
 	</screenshots>
 	<description>
@@ -40,6 +44,20 @@
 	</recommends>
 	<translation type="qt" source_locale="en_CA">parallel-launcher</translation>
 	<releases>
+		<release version="v6.4.0" date="2022-04-19">
+			<description>
+				<ul>
+					<li>Tweaked various things when playing on Steam Deck for a better user experience</li>
+					<li>Changed the layout of the RHDC view to be more horizontal</li>
+					<li>Enable Discord integration by default in the Flatpak version</li>
+					<li>Renamed the ParallelN64 core file to ensure RetroArch will never overwrite it</li>
+					<li>The Parallel Launcher window now has two separate sizes that it saves separately for the classic and RHDC views</li>
+					<li>Fixed a bug where the RHDC view would not remember your last selected ROM on startup</li>
+					<li>Fixed graphical bugs in the RHDC view when horizontally resizing the window</li>
+					<li>Fixed the last few controller mappings going to the wrong inputs when using Quick Configure</li>
+				</ul>
+			</description>
+		</release>
 		<release version="v6.3.0" date="2022-04-18">
 			<description>
 				<ul>
