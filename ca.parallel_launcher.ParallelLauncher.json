@@ -58,32 +58,6 @@
 			]
 		},
 		{
-			"name": "parallel-launcher",
-			"buildsystem": "qmake",
-			"config-opts": [
-				"CONFIG+=flatpak-version",
-				"LIBS+=-L/app/lib"
-			],
-			"sources": [
-				{
-					"type": "git",
-					"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-					"commit": "9afd6aef1a407ab9a77512ebf4f031420440a695"
-				},
-				{
-					"type": "file",
-					"path": "ca.parallel_launcher.ParallelLauncher.metainfo.xml"
-				}
-			],
-			"post-install": [
-				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
-				"mkdir -p /app/share/icons/hicolor/128x128/apps/",
-				"mv -f /app/share/icons/appicon.svg /app/share/icons/hicolor/128x128/apps/ca.parallel_launcher.ParallelLauncher.svg",
-				"mv -f /app/share/mime/packages/bps-mime.xml /app/share/mime/packages/ca.parallel_launcher.ParallelLauncher.xml",
-				"install -D -t /app/share/metainfo/ ca.parallel_launcher.ParallelLauncher.metainfo.xml"
-			]
-		},
-		{
 			"name": "retroarch",
 			"config-opts": [ "--enable-dbus" ],
 			"make-args": [ "GLOBAL_CONFIG_DIR=/app/etc" ],
@@ -121,13 +95,30 @@
 			}]
 		},
 		{
-			"name": "libretro-core-info",
-			"make-install-args": [ "PREFIX=/app" ],
-			"sources": [{
-				"type": "git",
-				"url": "https://github.com/libretro/libretro-core-info.git",
-				"commit": "06dac6318c067a6a40e2ea1e1260e74681ada844"
-			}]
+			"name": "parallel-launcher",
+			"buildsystem": "qmake",
+			"config-opts": [
+				"CONFIG+=flatpak-version",
+				"LIBS+=-L/app/lib"
+			],
+			"sources": [
+				{
+					"type": "git",
+					"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
+					"commit": "a530056c4c988657900d890f2a6aea5da98d009a"
+				},
+				{
+					"type": "file",
+					"path": "ca.parallel_launcher.ParallelLauncher.metainfo.xml"
+				}
+			],
+			"post-install": [
+				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
+				"mkdir -p /app/share/icons/hicolor/128x128/apps/",
+				"mv -f /app/share/icons/appicon.svg /app/share/icons/hicolor/128x128/apps/ca.parallel_launcher.ParallelLauncher.svg",
+				"mv -f /app/share/mime/packages/bps-mime.xml /app/share/mime/packages/ca.parallel_launcher.ParallelLauncher.xml",
+				"install -D -t /app/share/metainfo/ ca.parallel_launcher.ParallelLauncher.metainfo.xml"
+			]
 		}
 	]
 }
