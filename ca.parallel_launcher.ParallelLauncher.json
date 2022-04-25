@@ -105,7 +105,7 @@
 				{
 					"type": "git",
 					"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-					"commit": "a530056c4c988657900d890f2a6aea5da98d009a"
+					"commit": "a5c44b0377f0d3880139d63bffa49a6512dda57b"
 				},
 				{
 					"type": "file",
