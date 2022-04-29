@@ -44,12 +44,21 @@
 	</recommends>
 	<translation type="qt" source_locale="en_CA">parallel-launcher</translation>
 	<releases>
+		<release version="v6.4.2" date="2022-04-29">
+			<description>
+				<ul>
+					<li>Fixed the GoldenEye input mode mapping the triggers incorrectly</li>
+					<li>Fixed icon-only buttons being too small on high dpi monitors</li>
+					<li>Removed the warning when starting Parallel Launcher in gaming mode on the Steam Deck</li>
+				</ul>
+			</description>
+		</release>
 		<release version="v6.4.1" date="2022-04-24">
 			<description>
 				<ul>
-					<li>Fixed a bug where opening a .bps patch from an external file browser would created a corrupted rom entry in the Parallel Launcher classic view</li>
-					<li>Removed the <i>Automatically Added</i> category. Roms added by launching them from a file browser now just go into Uncategorized</li>
-					<li>Fixed a bug where the controller deadzone and sensitivity settings were not being applied for users whose locale settings using a comma instead of a period for the decimal separator.</li>
+					<li>Fixed a bug where opening a .bps patch from an external file browser would create a corrupted rom entry in the Parallel Launcher classic view</li>
+					<li>Removed the 'Automatically Added' category. Roms added by launching them from a file browser now just go into Uncategorized</li>
+					<li>Fixed a bug where the controller deadzone and sensitivity settings were not being applied for users whose locale settings use a comma instead of a period for the decimal separator.</li>
 					<li>Slightly changed the buttons in the controller selection and setup dialogs to be less confusing when creating a new profile from a default.</li>
 				</ul>
 			</description>
