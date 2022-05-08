@@ -44,6 +44,16 @@
 	</recommends>
 	<translation type="qt" source_locale="en_CA">parallel-launcher</translation>
 	<releases>
+		<release version="v6.5.0" date="2022-05-08">
+			<description>
+				<ul>
+					<li>Parallel Launcher will now always check romhacking.com for graphics plugin recommendations when finding new roms, even if RHDC Integration is disabled.</li>
+					<li>Disabled integer scaling for the ParaLLEl plugin. It will now always scale to fill the window.</li>
+					<li>Fixed the RHDC icon being tiny on high DPI displays</li>
+					<li>RetroArch is now launched with a higher process priority on the Windows version</li>
+				</ul>
+			</description>
+		</release>
 		<release version="v6.4.2" date="2022-04-29">
 			<description>
 				<ul>
