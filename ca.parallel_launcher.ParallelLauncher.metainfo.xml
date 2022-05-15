@@ -44,6 +44,21 @@
 	</recommends>
 	<translation type="qt" source_locale="en_CA">parallel-launcher</translation>
 	<releases>
+		<release version="v6.6.2" date="2022-05-15">
+			<description>
+				<ul>
+					<li>Fixed the Now Playing window always appearing in the top left corner</li>
+					<li>Fixed the Now Playing window having its title bar offscreen on Windows</li>
+				</ul>
+			</description>
+		</release>
+		<release version="v6.6.1" date="2022-05-12">
+			<description>
+				<ul>
+					<li>Reverted to launching RetroArch with normal priority on Windows</li>
+				</ul>
+			</description>
+		</release>
 		<release version="v6.6.0" date="2022-05-09">
 			<description>
 				<ul>
