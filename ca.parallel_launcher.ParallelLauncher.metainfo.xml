@@ -44,6 +44,13 @@
 	</recommends>
 	<translation type="qt" source_locale="en_CA">parallel-launcher</translation>
 	<releases>
+		<release version="v6.6.3" date="2022-05-17">
+			<description>
+				<ul>
+					<li>Fixed a crash when launching Parallel Launcher by clicking on a rom file that hasn't yet been seen by Parallel Launcher and isn't from RHDC</li>
+				</ul>
+			</description>
+		</release>
 		<release version="v6.6.2" date="2022-05-15">
 			<description>
 				<ul>
