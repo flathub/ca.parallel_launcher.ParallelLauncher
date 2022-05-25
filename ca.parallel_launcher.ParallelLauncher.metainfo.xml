@@ -44,6 +44,15 @@
 	</recommends>
 	<translation type="qt" source_locale="en_CA">parallel-launcher</translation>
 	<releases>
+		<release version="v6.7.0" date="2022-05-25">
+			<description>
+				<ul>
+					<li>Save files can now be shared between different versions of the same RHDC hack. (Requires Romhacking.com integration to be enabled)</li>
+					<li>Hacks can now be sorted by star count in the RHDC view</li>
+					<li>Fixed a bug in the classic view where a group that was collapsed would expand itself again after a refresh if the currently selected rom is in the group</li>
+				</ul>
+			</description>
+		</release>
 		<release version="v6.6.3" date="2022-05-17">
 			<description>
 				<ul>
