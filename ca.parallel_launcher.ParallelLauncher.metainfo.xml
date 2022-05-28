@@ -44,6 +44,13 @@
 	</recommends>
 	<translation type="qt" source_locale="en_CA">parallel-launcher</translation>
 	<releases>
+		<release version="v6.8.0" date="2022-05-28">
+			<description>
+				<ul>
+					<li>Parallel Launcher now submits crash reports and basic telemetry data (no kind of personal information is ever sent)</li>
+				</ul>
+			</description>
+		</release>
 		<release version="v6.7.0" date="2022-05-25">
 			<description>
 				<ul>
