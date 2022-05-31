@@ -99,13 +99,14 @@
 			"buildsystem": "qmake",
 			"config-opts": [
 				"CONFIG+=flatpak-version",
+				"CONFIG+=no-precompiled-helpers",
 				"LIBS+=-L/app/lib"
 			],
 			"sources": [
 				{
 					"type": "git",
 					"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-					"commit": "625074b1031e5c6ec36b8555dec7b4bab85c23ef"
+					"commit": "68293a292ef3e28db25bfbba9ae126f2e3db345b"
 				},
 				{
 					"type": "file",
