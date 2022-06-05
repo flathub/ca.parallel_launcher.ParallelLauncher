@@ -44,10 +44,21 @@
 	</recommends>
 	<translation type="qt" source_locale="en_CA">parallel-launcher</translation>
 	<releases>
+		<release version="v6.9.1" date="2022-06-04">
+			<description>
+				<ul>
+					<li>Fixed a crash when changing the RHDC download folder if the previous download location no longer exists</li>
+					<li>Fixed incorrect icon scaling for high DPI screens on MacOS</li>
+					<li>Fixed a missing maximize button on the ROM Sources window on Windows</li>
+					<li>[Telemetry] Fixed Windows 11 reporting itself as Windows 10</li>
+					<li>[Telemetry] Fixed the OS name and version not being reported correctly in the Flatpak version</li>
+				</ul>
+			</description>
+		</release>
 		<release version="v6.9.0" date="2022-05-31">
 			<description>
 				<ul>
-					<li>Added Arabaic translations (thanks to Elazul for the translations)</li>
+					<li>Added Arabic translations (thanks to Elazul for the translations)</li>
 					<li>Fixed missing translations for the input select dropdown</li>
 					<li>Fixed input binding not working on some newer Linux distros when using the SDL2 driver</li>
 				</ul>
