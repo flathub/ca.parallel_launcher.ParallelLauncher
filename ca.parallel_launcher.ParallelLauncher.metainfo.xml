@@ -4,7 +4,7 @@
 	<id>ca.parallel_launcher.ParallelLauncher</id>
 	<launchable type="desktop-id">ca.parallel_launcher.ParallelLauncher.desktop</launchable>
 	<name>Parallel Launcher</name>
-	<summary>A simple easy-to-use launcher for the ParallelN64 and Mupen64Plus-Next emulators</summary>
+	<summary>Modern N64 Emulator</summary>
 	<developer_name>Matt Pharoah</developer_name>
 	<url type="homepage">https://parallel-launcher.ca</url>
 	<url type="bugtracker">https://gitlab.com/parallel-launcher/parallel-launcher/-/boards/2128467</url>
@@ -44,6 +44,15 @@
 	</recommends>
 	<translation type="qt" source_locale="en_CA">parallel-launcher</translation>
 	<releases>
+		<release version="v6.9.2" date="2022-06-08">
+			<description>
+				<ul>
+					<li>Fixed a crash that can occur when changing the controller input driver</li>
+					<li>Fixed long author lists causing the RHDC view window to expand very wide</li>
+					<li>Fixed the crash reporter not giving useful stack traces on Linux</li>
+				</ul>
+			</description>
+		</release>
 		<release version="v6.9.1" date="2022-06-04">
 			<description>
 				<ul>
