@@ -44,6 +44,16 @@
 	</recommends>
 	<translation type="qt" source_locale="en_CA">parallel-launcher</translation>
 	<releases>
+		<release version="v6.9.3" date="2022-06-13">
+			<description>
+				<ul>
+					<li>Fixed crashes that can occur when multiple instances of Parallel Launcher are open at the same time</li>
+					<li>Fixed a crash when loading roms if the OS returns an error code when fetching the size of a rom file</li>
+					<li>Fixed a crash when clicking on the New/Edit Profile button in the controller select dialog if you somehow manage to have no controller profile selected</li>
+					<li>Fixed a bug where your selected controller profile for an input device could be reset when changing input drivers</li>
+				</ul>
+			</description>
+		</release>
 		<release version="v6.9.2" date="2022-06-08">
 			<description>
 				<ul>
