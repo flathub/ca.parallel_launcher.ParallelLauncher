@@ -17,11 +17,19 @@
 	<screenshots>
 		<screenshot type="default">
 			<caption>Classic View</caption>
-			<image type="source">https://parallel-launcher.ca/img/screenshot.png</image>
+			<image type="source">https://parallel-launcher.ca/img/flatpak/classic.en.png</image>
+			<image type="source" xml:lang="es">https://parallel-launcher.ca/img/flatpak/classic.es.png</image>
+			<image type="source" xml:lang="de">https://parallel-launcher.ca/img/flatpak/classic.de.png</image>
+			<image type="source" xml:lang="fr">https://parallel-launcher.ca/img/flatpak/classic.fr.png</image>
+			<image type="source" xml:lang="it">https://parallel-launcher.ca/img/flatpak/classic.it.png</image>
 		</screenshot>
 		<screenshot>
 			<caption>RHDC View</caption>
-			<image type="source">https://parallel-launcher.ca/img/rhdc-view.png</image>
+			<image type="source">https://parallel-launcher.ca/img/flatpak/rhdc.en.png</image>
+			<image type="source" xml:lang="es">https://parallel-launcher.ca/img/flatpak/rhdc.es.png</image>
+			<image type="source" xml:lang="de">https://parallel-launcher.ca/img/flatpak/rhdc.de.png</image>
+			<image type="source" xml:lang="fr">https://parallel-launcher.ca/img/flatpak/rhdc.fr.png</image>
+			<image type="source" xml:lang="it">https://parallel-launcher.ca/img/flatpak/rhdc.it.png</image>
 		</screenshot>
 	</screenshots>
 	<description>
@@ -58,6 +66,16 @@
 	</recommends>
 	<translation type="qt" source_locale="en_CA">parallel-launcher</translation>
 	<releases>
+		<release version="v6.9.4" date="2022-06-20">
+			<description>
+				<ul>
+					<li>Fixed misaligned icon and text for hack difficulty in the RHDC view</li>
+					<li>Fixed the window sometimes resizing itself vertically even when it doesn't actually need any more space</li>
+					<li>Fixed the plugin selection widget not resizing itself correctly when changing emulators</li>
+					<li>Fixed Québécois French not showing up the language selection</li>
+				</ul>
+			</description>
+		</release>
 		<release version="v6.9.3" date="2022-06-13">
 			<description>
 				<ul>
