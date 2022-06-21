@@ -18,18 +18,24 @@
 		<screenshot type="default">
 			<caption>Classic View</caption>
 			<image type="source">https://parallel-launcher.ca/img/flatpak/classic.en.png</image>
-			<image type="source" xml:lang="es">https://parallel-launcher.ca/img/flatpak/classic.es.png</image>
-			<image type="source" xml:lang="de">https://parallel-launcher.ca/img/flatpak/classic.de.png</image>
-			<image type="source" xml:lang="fr">https://parallel-launcher.ca/img/flatpak/classic.fr.png</image>
-			<image type="source" xml:lang="it">https://parallel-launcher.ca/img/flatpak/classic.it.png</image>
+			<!-- Flatpak doesn't handle translated images correctly
+				<image type="source" xml:lang="es">https://parallel-launcher.ca/img/flatpak/classic.es.png</image>
+				<image type="source" xml:lang="de">https://parallel-launcher.ca/img/flatpak/classic.de.png</image>
+				<image type="source" xml:lang="fr">https://parallel-launcher.ca/img/flatpak/classic.fr.png</image>
+				<image type="source" xml:lang="it">https://parallel-launcher.ca/img/flatpak/classic.it.png</image>
+				<image type="source" xml:lang="ar">https://parallel-launcher.ca/img/flatpak/classic.ar.png</image>
+			-->
 		</screenshot>
 		<screenshot>
 			<caption>RHDC View</caption>
 			<image type="source">https://parallel-launcher.ca/img/flatpak/rhdc.en.png</image>
-			<image type="source" xml:lang="es">https://parallel-launcher.ca/img/flatpak/rhdc.es.png</image>
-			<image type="source" xml:lang="de">https://parallel-launcher.ca/img/flatpak/rhdc.de.png</image>
-			<image type="source" xml:lang="fr">https://parallel-launcher.ca/img/flatpak/rhdc.fr.png</image>
-			<image type="source" xml:lang="it">https://parallel-launcher.ca/img/flatpak/rhdc.it.png</image>
+			<!-- Flatpak doesn't handle translated images correctly
+				<image type="source" xml:lang="es">https://parallel-launcher.ca/img/flatpak/rhdc.es.png</image>
+				<image type="source" xml:lang="de">https://parallel-launcher.ca/img/flatpak/rhdc.de.png</image>
+				<image type="source" xml:lang="fr">https://parallel-launcher.ca/img/flatpak/rhdc.fr.png</image>
+				<image type="source" xml:lang="it">https://parallel-launcher.ca/img/flatpak/rhdc.it.png</image>
+				<image type="source" xml:lang="ar">https://parallel-launcher.ca/img/flatpak/rhdc.ar.png</image>
+			-->
 		</screenshot>
 	</screenshots>
 	<description>
@@ -50,6 +56,8 @@
 	<icon type="remote">https://parallel-launcher.ca/img/appicon.svg</icon>
 	<categories>
 		<category>Game</category>
+		<category>Emulator</category>
+		<category>Qt</category>
 	</categories>
 	<keywords>
 		<keyword>N64</keyword>
