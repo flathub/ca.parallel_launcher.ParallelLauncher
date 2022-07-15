@@ -102,22 +102,18 @@
 				"CONFIG+=no-precompiled-helpers",
 				"LIBS+=-L/app/lib"
 			],
-			"sources": [
-				{
-					"type": "git",
-					"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-					"commit": "e7c1e007421e3edde8243bbb90957276d03a3db8"
-				},
-				{
-					"type": "file",
-					"path": "ca.parallel_launcher.ParallelLauncher.metainfo.xml"
-				}
-			],
+			"sources": [{
+				"type": "git",
+				"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
+				"commit": "0298fa907a4b784175f915c0e2888a9b65427e05"
+			}],
 			"post-install": [
 				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
-				"mkdir -p /app/share/icons/hicolor/128x128/apps/",
-				"mv -f /app/share/icons/appicon.svg /app/share/icons/hicolor/128x128/apps/ca.parallel_launcher.ParallelLauncher.svg",
-				"mv -f /app/share/mime/packages/bps-mime.xml /app/share/mime/packages/ca.parallel_launcher.ParallelLauncher.xml",
+				"mkdir -p /app/share/icons/hicolor/128x128/apps",
+				"mkdir -p /app/share/mime/packages",
+				"mv -f data/appicon.svg /app/share/icons/hicolor/128x128/apps/ca.parallel_launcher.ParallelLauncher.svg",
+				"mv -f bps-mime.xml /app/share/mime/packages/ca.parallel_launcher.ParallelLauncher.xml",
+				"sed -i '/<image[^>]*xml:lang/d' ca.parallel_launcher.ParallelLauncher.metainfo.xml",
 				"install -D -t /app/share/metainfo/ ca.parallel_launcher.ParallelLauncher.metainfo.xml"
 			]
 		}
