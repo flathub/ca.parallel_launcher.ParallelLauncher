@@ -95,6 +95,20 @@
 			}]
 		},
 		{
+			"name": "dosfstools",
+			"buildsystem": "autotools",
+			"sources": [{
+				"type": "git",
+				"url": "https://github.com/dosfstools/dosfstools.git",
+				"commit": "697f7692c951173c1b732901e13f72bd3182d575"
+			}],
+			"post-install": [
+				"mv /app/sbin/mkfs.fat /app/bin/mkfs.fat",
+				"rm /app/sbin/fatlabel",
+				"rm /app/sbin/fsck.fat"
+			]
+		},
+		{
 			"name": "parallel-launcher",
 			"buildsystem": "qmake",
 			"config-opts": [
@@ -105,7 +119,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-				"commit": "b91d2fc981aa08a33a398057bbad936e5e1263a0"
+				"commit": "3fae4294c1f6506dbd81281ddd0083c51a88e851"
 			}],
 			"post-install": [
 				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
