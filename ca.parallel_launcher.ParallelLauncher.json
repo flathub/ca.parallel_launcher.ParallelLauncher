@@ -101,7 +101,12 @@
 				"type": "git",
 				"url": "https://github.com/dosfstools/dosfstools.git",
 				"commit": "697f7692c951173c1b732901e13f72bd3182d575"
-			}]
+			}],
+			"post-install": [
+				"mv /app/sbin/mkfs.fat /app/bin/mkfs.fat",
+				"rm /app/sbin/fatlabel",
+				"rm /app/sbin/fsck.fat"
+			]
 		},
 		{
 			"name": "parallel-launcher",
@@ -114,7 +119,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-				"commit": "cdebe940b6dc4b6f643ef0826c9804521f597433"
+				"commit": "5e139f327131942e82642f988c59ecfcadf2206f"
 			}],
 			"post-install": [
 				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
