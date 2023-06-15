@@ -6,6 +6,7 @@
 	"command": "parallel-launcher",
 	"finish-args" : [
 		"--socket=x11",
+		"--socket=fallback-x11",
 		"--socket=wayland",
 		"--socket=pulseaudio",
 		"--share=ipc",
@@ -60,7 +61,11 @@
 		{
 			"name": "retroarch",
 			"config-opts": [ "--enable-dbus" ],
-			"make-args": [ "GLOBAL_CONFIG_DIR=/app/etc" ],
+			"make-args": [
+				"GLOBAL_CONFIG_DIR=/app/etc",
+				"HAVE_TRANSLATE=1",
+				"HAVE_ACCESSIBILITY=1"
+			],
 			"sources": [
 				{
 					"type": "git",
@@ -95,6 +100,25 @@
 			}]
 		},
 		{
+			"name": "Gamemode",
+			"buildsystem": "meson",
+			"config-opts": [
+				"-Dwith-examples=false",
+				"-Dwith-util=false",
+				"-Dwith-sd-bus-provider=no-daemon"
+			],
+			"sources": [{
+				"type": "archive",
+				"url": "https://github.com/FeralInteractive/gamemode/archive/refs/tags/1.7.tar.gz",
+				"sha256": "8a1718c657cb1d3c8269edfd397faf3cb41fccd885198ef0225bf8f82217c42f"
+			}],
+			"cleanup": [ "/include", "/lib/pkgconfig" ],
+			"post-install": [
+				"install -t /app/bin -Dm755 ../data/gamemoderun",
+				"rm /app/lib/libgamemodeauto.a"
+			]
+		},
+		{
 			"name": "dosfstools",
 			"buildsystem": "autotools",
 			"sources": [{
@@ -119,7 +143,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-				"commit": "72524d85b9685b55efa5fe1410713707b298c3ed"
+				"commit": "fde8fc4a3e332ecabcc9d6ad24b5c2a557d47ba4"
 			}],
 			"post-install": [
 				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
