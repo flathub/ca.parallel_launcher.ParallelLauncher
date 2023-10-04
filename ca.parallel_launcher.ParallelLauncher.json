@@ -13,6 +13,7 @@
 		"--share=network",
 		"--device=all",
 		"--filesystem=host",
+		"--system-talk-name=org.freedesktop.UDisks2",
 		"--talk-name=org.freedesktop.ScreenSaver",
 		"--talk-name=org.freedesktop.PowerManagement.Inhibit",
 		"--talk-name=org.freedesktop.login1",
@@ -143,7 +144,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-				"commit": "437b6d7c830e2a94222b6c0fbeab6db94977f305"
+				"commit": "d89585c58f2c49261f0d76e8c379aeca018dcbfe"
 			}],
 			"post-install": [
 				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
