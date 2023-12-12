@@ -71,7 +71,7 @@
 				{
 					"type": "git",
 					"url": "https://github.com/libretro/RetroArch.git",
-					"commit": "6616b807edea5b56683e9fbca8b003b436c22b13"
+					"commit": "6c2cc456284fcfa6fa5f94664950926c020d2f7b"
 				},
 				{
 					"type": "file",
@@ -88,7 +88,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://github.com/libretro/retroarch-assets.git",
-				"commit": "4ec80faf1b5439d1654f407805bb66141b880826"
+				"commit": "39c44632e3be156246f2bd34cff08ac9f842126e"
 			}]
 		},
 		{
@@ -97,7 +97,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://github.com/libretro/libretro-database.git",
-				"commit": "6a8d65d2bc1b7ffa7accb882e80c0a77b931bcc6"
+				"commit": "ebc9c3f715e78be1d44628468648ff8709aaa743"
 			}]
 		},
 		{
@@ -144,7 +144,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-				"commit": "087b3389da58eb1cf9b8dd919cf32a7fc998b43e"
+				"commit": "8e810377f6e5f478744dee2c9e5502795dd5dce1"
 			}],
 			"post-install": [
 				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
