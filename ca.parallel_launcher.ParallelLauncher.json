@@ -144,10 +144,12 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-				"commit": "2c87ec98f27970db72ba8a63e45cbdffa2d0fa29"
+				"commit": "b65b5f1ba8c475ad6398d7613226f72852ff0356"
 			}],
 			"post-install": [
 				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
+				"install -D -t /app/share/parallel-launcher/ parallel-launcher-lsjs",
+				"install -D -t /app/share/parallel-launcher/ parallel-launcher-sdl-proxy",
 				"mkdir -p /app/share/icons/hicolor/128x128/apps",
 				"mkdir -p /app/share/mime/packages",
 				"mv -f data/appicon.svg /app/share/icons/hicolor/128x128/apps/ca.parallel_launcher.ParallelLauncher.svg",
