@@ -138,13 +138,12 @@
 			"buildsystem": "qmake",
 			"config-opts": [
 				"CONFIG+=flatpak-version",
-				"CONFIG+=no-precompiled-helpers",
 				"LIBS+=-L/app/lib"
 			],
 			"sources": [{
 				"type": "git",
 				"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-				"commit": "2dce7a521277c3b794b5c464d5f71933a150c593"
+				"commit": "42173ac68598b4a765fa8b433ef014766b97092a"
 			}],
 			"post-install": [
 				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
