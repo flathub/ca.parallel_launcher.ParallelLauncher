@@ -44,6 +44,20 @@
 			]
 		},
 		{
+			"name": "libdecor",
+			"buildsystem": "meson",
+			"config-opts": [ "-Ddemo=false" ],
+			"sources": [{
+				"type": "archive",
+				"url": "https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/0.2.2/libdecor-0.2.2.tar.gz",
+				"sha256": "40a1d8be07d8b1f66e8fb98a1f4a84549ca6bf992407198a5055952be80a8525"
+			}],
+			"cleanup": [
+				"/include",
+				"/lib/pkgconfig"
+			]
+		},
+		{
 			"name": "discord-rpc",
 			"buildsystem": "cmake-ninja",
 			"config-opts": [
@@ -71,7 +85,7 @@
 				{
 					"type": "git",
 					"url": "https://github.com/libretro/RetroArch.git",
-					"commit": "6c2cc456284fcfa6fa5f94664950926c020d2f7b"
+					"commit": "06fa5325f8b3cd42e6fba3d57835d5924c9ea2e7"
 				},
 				{
 					"type": "file",
@@ -88,7 +102,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://github.com/libretro/retroarch-assets.git",
-				"commit": "39c44632e3be156246f2bd34cff08ac9f842126e"
+				"commit": "923b711dc6772a168d83dc8915e9260730fcf3a1"
 			}]
 		},
 		{
@@ -97,7 +111,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://github.com/libretro/libretro-database.git",
-				"commit": "ebc9c3f715e78be1d44628468648ff8709aaa743"
+				"commit": "977612e2cd284f67fc0d121d9d94c5982a49f61e"
 			}]
 		},
 		{
@@ -143,12 +157,12 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-				"commit": "42173ac68598b4a765fa8b433ef014766b97092a"
+				"commit": "0131d88dfa8210dbef8f2c456e5c3f8eddadefb0"
 			}],
 			"post-install": [
 				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
 				"install -D -t /app/share/parallel-launcher/ parallel-launcher-lsjs",
-				"install -D -t /app/share/parallel-launcher/ parallel-launcher-sdl-proxy",
+				"install -D -t /app/share/parallel-launcher/ parallel-launcher-sdl-relay",
 				"mkdir -p /app/share/icons/hicolor/128x128/apps",
 				"mkdir -p /app/share/mime/packages",
 				"mv -f data/appicon.svg /app/share/icons/hicolor/128x128/apps/ca.parallel_launcher.ParallelLauncher.svg",
