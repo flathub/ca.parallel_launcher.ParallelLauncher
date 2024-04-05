@@ -162,7 +162,7 @@
 			"post-install": [
 				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
 				"install -D -t /app/share/parallel-launcher/ parallel-launcher-lsjs",
-				"install -D -t /app/share/parallel-launcher/ parallel-launcher-sdl-proxy",
+				"install -D -t /app/share/parallel-launcher/ parallel-launcher-sdl-relay",
 				"mkdir -p /app/share/icons/hicolor/128x128/apps",
 				"mkdir -p /app/share/mime/packages",
 				"mv -f data/appicon.svg /app/share/icons/hicolor/128x128/apps/ca.parallel_launcher.ParallelLauncher.svg",
