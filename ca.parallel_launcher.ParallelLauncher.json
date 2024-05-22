@@ -13,11 +13,13 @@
 		"--share=network",
 		"--device=all",
 		"--filesystem=host",
+		"--filesystem=/run/udev:ro",
 		"--system-talk-name=org.freedesktop.UDisks2",
 		"--talk-name=org.freedesktop.ScreenSaver",
 		"--talk-name=org.freedesktop.PowerManagement.Inhibit",
 		"--talk-name=org.freedesktop.login1",
-		"--filesystem=xdg-run/app/com.discordapp.Discord:create"
+		"--filesystem=xdg-run/app/com.discordapp.Discord:create",
+		"--filesystem=xdg-run/gamescope-0:ro"
 	],
 	"modules": [
 		{
