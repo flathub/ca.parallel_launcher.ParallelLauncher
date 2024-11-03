@@ -166,7 +166,7 @@
 				"install -D -t /app/share/parallel-launcher/ parallel-launcher-sdl-relay",
 				"mkdir -p /app/share/icons/hicolor/scalable/apps",
 				"mkdir -p /app/share/mime/packages",
-				"mv -f data/appicon.svg /app/share/icons/hicolor/128x128/apps/ca.parallel_launcher.ParallelLauncher.svg",
+				"mv -f data/appicon.svg /app/share/icons/hicolor/scalable/apps/ca.parallel_launcher.ParallelLauncher.svg",
 				"mv -f bps-mime.xml /app/share/mime/packages/ca.parallel_launcher.ParallelLauncher.xml",
 				"sed -i '/<image[^>]*xml:lang/d' ca.parallel_launcher.ParallelLauncher.metainfo.xml",
 				"install -D -t /app/share/metainfo/ ca.parallel_launcher.ParallelLauncher.metainfo.xml"
