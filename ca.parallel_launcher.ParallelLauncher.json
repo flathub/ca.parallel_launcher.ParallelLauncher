@@ -5,7 +5,6 @@
 	"sdk": "org.kde.Sdk",
 	"command": "parallel-launcher",
 	"finish-args" : [
-		"--socket=x11",
 		"--socket=fallback-x11",
 		"--socket=wayland",
 		"--socket=pulseaudio",
@@ -159,15 +158,15 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-				"commit": "c4b2f185035bdcee416eac8eb2014bee6937c9dd"
+				"commit": "90ae3815b01b7a1a7344effd61698488fb1c6e2e"
 			}],
 			"post-install": [
 				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
 				"install -D -t /app/share/parallel-launcher/ parallel-launcher-lsjs",
 				"install -D -t /app/share/parallel-launcher/ parallel-launcher-sdl-relay",
-				"mkdir -p /app/share/icons/hicolor/128x128/apps",
+				"mkdir -p /app/share/icons/hicolor/scalable/apps",
 				"mkdir -p /app/share/mime/packages",
-				"mv -f data/appicon.svg /app/share/icons/hicolor/128x128/apps/ca.parallel_launcher.ParallelLauncher.svg",
+				"mv -f data/appicon.svg /app/share/icons/hicolor/scalable/apps/ca.parallel_launcher.ParallelLauncher.svg",
 				"mv -f bps-mime.xml /app/share/mime/packages/ca.parallel_launcher.ParallelLauncher.xml",
 				"sed -i '/<image[^>]*xml:lang/d' ca.parallel_launcher.ParallelLauncher.metainfo.xml",
 				"install -D -t /app/share/metainfo/ ca.parallel_launcher.ParallelLauncher.metainfo.xml"
