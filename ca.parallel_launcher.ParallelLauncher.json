@@ -158,7 +158,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-				"commit": "809e6e7edf9b67874a81db89c12e91ecf16a3021"
+				"commit": "27ebdca25ddd4a82baf16152fc89da3e5c579f68"
 			}],
 			"post-install": [
 				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
