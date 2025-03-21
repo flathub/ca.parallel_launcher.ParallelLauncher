@@ -40,7 +40,7 @@
 				{
 					"type": "git",
 					"url": "https://github.com/Tencent/rapidjson.git",
-					"commit": "f54b0e47a08782a6131cc3d60f94d038fa6e0a51"
+					"commit": "24b5e7a8b27f42fa16b96fc70aade9106cf7102f"
 				}
 			]
 		},
