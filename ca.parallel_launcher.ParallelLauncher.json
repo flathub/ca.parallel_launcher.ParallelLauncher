@@ -1,7 +1,7 @@
 {
 	"id": "ca.parallel_launcher.ParallelLauncher",
 	"runtime": "org.kde.Platform",
-	"runtime-version": "5.15-23.08",
+	"runtime-version": "6.8",
 	"sdk": "org.kde.Sdk",
 	"command": "parallel-launcher",
 	"finish-args" : [
@@ -86,7 +86,7 @@
 				{
 					"type": "git",
 					"url": "https://github.com/libretro/RetroArch.git",
-					"commit": "06fa5325f8b3cd42e6fba3d57835d5924c9ea2e7"
+					"commit": "864ad02177e5e39c9951082e127efcc6a693b1e5"
 				},
 				{
 					"type": "file",
@@ -103,7 +103,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://github.com/libretro/retroarch-assets.git",
-				"commit": "923b711dc6772a168d83dc8915e9260730fcf3a1"
+				"commit": "c4f1ec8bddba15e1b1a00a7e56c50cf0eca8b5c9"
 			}]
 		},
 		{
@@ -112,7 +112,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://github.com/libretro/libretro-database.git",
-				"commit": "977612e2cd284f67fc0d121d9d94c5982a49f61e"
+				"commit": "90e8964046a81c6ecbff5d41ce36fb2d39e2a7ea"
 			}]
 		},
 		{
@@ -158,7 +158,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-				"commit": "90d125546f77d637c3d898d29a87a76deca802db"
+				"commit": "a5b191d809905a0a8d581b47e54a28fe71774a3c"
 			}],
 			"post-install": [
 				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
