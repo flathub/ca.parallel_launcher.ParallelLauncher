@@ -1,7 +1,7 @@
 {
 	"id": "ca.parallel_launcher.ParallelLauncher",
 	"runtime": "org.kde.Platform",
-	"runtime-version": "5.15-23.08",
+	"runtime-version": "5.15-24.08",
 	"sdk": "org.kde.Sdk",
 	"command": "parallel-launcher",
 	"finish-args" : [
@@ -158,7 +158,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-				"commit": "a5b191d809905a0a8d581b47e54a28fe71774a3c"
+				"commit": "5aca9e3f28afca6e8336f4b81f2be77552746c69"
 			}],
 			"post-install": [
 				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
