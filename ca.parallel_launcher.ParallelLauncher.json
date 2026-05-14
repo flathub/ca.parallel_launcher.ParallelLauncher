@@ -1,7 +1,7 @@
 {
 	"id": "ca.parallel_launcher.ParallelLauncher",
 	"runtime": "org.kde.Platform",
-	"runtime-version": "6.9",
+	"runtime-version": "6.10",
 	"sdk": "org.kde.Sdk",
 	"command": "parallel-launcher",
 	"finish-args" : [
@@ -13,6 +13,7 @@
 		"--device=all",
 		"--filesystem=host",
 		"--filesystem=/run/udev:ro",
+		"--filesystem=xdg-run/pipewire-0",
 		"--system-talk-name=org.freedesktop.UDisks2",
 		"--talk-name=org.freedesktop.ScreenSaver",
 		"--talk-name=org.freedesktop.PowerManagement.Inhibit",
@@ -45,20 +46,6 @@
 			]
 		},
 		{
-			"name": "libdecor",
-			"buildsystem": "meson",
-			"config-opts": [ "-Ddemo=false" ],
-			"sources": [{
-				"type": "archive",
-				"url": "https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/0.2.2/libdecor-0.2.2.tar.gz",
-				"sha256": "40a1d8be07d8b1f66e8fb98a1f4a84549ca6bf992407198a5055952be80a8525"
-			}],
-			"cleanup": [
-				"/include",
-				"/lib/pkgconfig"
-			]
-		},
-		{
 			"name": "discord-rpc",
 			"buildsystem": "cmake-ninja",
 			"config-opts": [
@@ -75,18 +62,34 @@
 			]
 		},
 		{
+			"name": "libdecor",
+			"buildsystem": "meson",
+			"config-opts": [ "-Ddemo=false", "-Dgtk=disabled" ],
+			"sources": [{
+				"type": "archive",
+				"url": "https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/0.2.5/libdecor-0.2.5.tar.gz",
+				"sha256": "39c109a9a7eae943ba34d18a282c447d5729f9c486c8bc05ea305e4acd341522"
+			}],
+			"cleanup": [
+				"/include",
+				"/lib/pkgconfig"
+			]
+		},
+		{
 			"name": "retroarch",
 			"config-opts": [ "--enable-dbus" ],
 			"make-args": [
 				"GLOBAL_CONFIG_DIR=/app/etc",
 				"HAVE_TRANSLATE=1",
-				"HAVE_ACCESSIBILITY=1"
+				"HAVE_ACCESSIBILITY=1",
+				"HAVE_UPDATE_ASSETS=0",
+				"HAVE_UPDATE_CORE_INFO=0"
 			],
 			"sources": [
 				{
 					"type": "git",
 					"url": "https://github.com/libretro/RetroArch.git",
-					"commit": "864ad02177e5e39c9951082e127efcc6a693b1e5"
+					"commit": "69a4f0ea1e8aaf442ae4858f2e7f2b31a1776576"
 				},
 				{
 					"type": "file",
@@ -103,7 +106,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://github.com/libretro/retroarch-assets.git",
-				"commit": "c4f1ec8bddba15e1b1a00a7e56c50cf0eca8b5c9"
+				"commit": "76cc6cf03507429c5a136cb50d83a14e05430fcd"
 			}]
 		},
 		{
@@ -112,27 +115,8 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://github.com/libretro/libretro-database.git",
-				"commit": "90e8964046a81c6ecbff5d41ce36fb2d39e2a7ea"
+				"commit": "fbcc8c1c24d8b20b6aaca95b4da6a2f39ad85f05"
 			}]
-		},
-		{
-			"name": "Gamemode",
-			"buildsystem": "meson",
-			"config-opts": [
-				"-Dwith-examples=false",
-				"-Dwith-util=false",
-				"-Dwith-sd-bus-provider=no-daemon"
-			],
-			"sources": [{
-				"type": "git",
-				"url": "https://github.com/FeralInteractive/gamemode.git",
-				"tag": "1.8.1",
-				"commit": "5180d89e66830d87f69687b95fb86f622552b94b"
-			}],
-			"cleanup": [ "/include", "/lib/pkgconfig" ],
-			"post-install": [
-				"install -t /app/bin -Dm755 ../data/gamemoderun"
-			]
 		},
 		{
 			"name": "dosfstools",
@@ -158,7 +142,7 @@
 			"sources": [{
 				"type": "git",
 				"url": "https://gitlab.com/parallel-launcher/parallel-launcher.git",
-				"commit": "0547287c33fbc0fb98ca82da8bd61b472b8f6305"
+				"commit": "8f2924c213f7c98118ab5a86fc21c452b77a7057"
 			}],
 			"post-install": [
 				"install -D -t /app/share/parallel-launcher/translations/ lang/*.qm",
