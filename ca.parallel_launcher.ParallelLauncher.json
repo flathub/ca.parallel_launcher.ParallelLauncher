@@ -50,7 +50,8 @@
 			"buildsystem": "cmake-ninja",
 			"config-opts": [
 				"-DBUILD_SHARED_LIBS=ON",
-				"-DBUILD_EXAMPLES=OFF"
+				"-DBUILD_EXAMPLES=OFF",
+				"-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
 			],
 			"cleanup": [ "/include" ],
 			"sources": [
